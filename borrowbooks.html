@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-image: url('SunsetBackground.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+             }
+        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="borrowbooks.css">
+    <title>Borrow a Book</title>
+</head>
+<body>
+
+    <header>
+        <h1>Borrow a Book</h1>
+        <nav>
+            <ul>
+                <li><a href="dashbord.html">Dashboard</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="borrow-form">
+            <h2>Borrow a Book</h2>
+            <form action="process-borrow.php" method="post">
+                <label for="book">Select a Book:</label>
+                <select id="book" name="book" required>
+                    <option value="book1">Book 1</option>
+                    <option value="book2">Book 2</option>
+                    <!-- Add more book options as needed -->
+                </select>
+
+                <label for="borrow-period">Borrowing Period (days):</label>
+                <input type="number" id="borrow-period" name="borrow-period" min="1" max="14" required>
+
+                <button type="submit">Borrow</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Library Website</p>
+    </footer>
+
+</body>
+</html>
